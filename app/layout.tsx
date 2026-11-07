@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  other: {
+    "p:domain_verify": "515936126e2b9ed664062201c19bbd84",
+  },
   authors: [{ name: site.name }],
   openGraph: {
     type: "website",

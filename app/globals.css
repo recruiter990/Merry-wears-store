@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-forest: #173b32;
+  --color-forest-deep: #102822;
+  --color-burgundy: #8e2637;
+  --color-cream: #f8f3e9;
+  --color-beige: #e8ddcc;
+  --color-gold: #c5a46d;
+  --color-charcoal: #292929;
+  --color-ink: #292929;
+  --color-muted: #5c5852;
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-dm);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-feature-settings: "ss01";
+}
+
+::selection {
+  background: #173b32;
+  color: #f8f3e9;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-underline-offset: 0.22em;
+}
+
+.hairline {
+  background: color-mix(in srgb, var(--color-forest) 18%, transparent);
+}
+
+.paper-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-forest) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-forest) 6%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.editorial-rule {
+  height: 1px;
+  width: 100%;
+  background: color-mix(in srgb, var(--color-forest) 22%, transparent);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise 0.8s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    animation: none;
+  }
+}
